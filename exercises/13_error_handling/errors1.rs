@@ -9,12 +9,10 @@
 // Execute `rustlings hint errors1` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 use std::error::Error;
 use std::result;
 
-pub fn generate_nametag_text(name: String) -> result::Result<String, Error> {
+pub fn generate_nametag_text(name: String) -> result::Result<String,Error<String>> {
     if name.is_empty() {
         Err("`name` was empty; it must be nonempty.".into())
     } else {
